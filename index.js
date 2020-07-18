@@ -53,9 +53,9 @@ client.on("message", async message => {
                                             .setAuthor(message.guild.name, message.guild.iconURL({format: "gif", format: "png", dynamic: true, size: 1024}))
                                             .setFooter('BY ' + message.author.username, message.author.displayAvatarURL({format: "gif", format: "png", dynamic: true}))
                                             .addFields(
-                                                { name: '<a:6795_rainbowleft:729671060664090634> **SERVER**', value: "`" + message.guild.name + "`", inline: true },
+                                                { name: '<a:6795_rainbowleft:729671060664090634> **SERVER**', value: message.guild.name, inline: true },
                                                 { name: '<a:6795_rainbowleft:729671060664090634> **SEND BY**', value: "<@" + message.author.id + ">", inline: true },
-                                                { name: '<a:6795_rainbowleft:729671060664090634> **SEND AT**', value: `${moment().format("D/M/Y, h:mm")} | **${moment().startOf('day').fromNow()}**`, inline: true },
+                                                { name: '<a:6795_rainbowleft:729671060664090634> **SEND AT**', value: `${moment().format("D/M/Y, h:mm")}`, inline: true },
                                             )
                                             member.send(embed);
                                             member.send(`\n\n\n> **USER**: ||${member}||\n> **MESSAGE**:\n\n${args}`);
