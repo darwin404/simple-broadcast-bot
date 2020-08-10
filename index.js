@@ -7,7 +7,7 @@ const prefix = "-";
 
 client.on("ready", () => {
     function randomStatus() {
-      let status = ["MAROC", "VALORANT", "BROADCAST"]
+      let status = ["Doako", "WeNeverDie", "Broadcast"]
       let rstatus = Math.floor(Math.random() * status.length);
   
       client.user.setActivity(status[rstatus], {type: "STREAMING", url: "https://www.twitch.tv/xdarwinx_"});
