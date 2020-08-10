@@ -48,7 +48,7 @@ client.on("message", async message => {
                                             .setColor('RANDOM')
                                             .setTitle('<a:8584_pin:725798073753927761>・IMPORTANT ANNOUNCEMENT')
                                             .setTimestamp()
-                                            .setImage('https://i.imgur.com/MJwCbLF.gif')
+                                            .setImage('https://i.imgur.com/TJdHNv6.gif')
                                             .setThumbnail(member.user.displayAvatarURL({format: "gif", format: "png", dynamic: true, size: 1024}))
                                             .setAuthor(message.guild.name, message.guild.iconURL({format: "gif", format: "png", dynamic: true, size: 1024}))
                                             .setFooter('BY ' + message.author.username, message.author.displayAvatarURL({format: "gif", format: "png", dynamic: true}))
