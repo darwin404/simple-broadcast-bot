@@ -1,18 +1,14 @@
-﻿﻿const Discord = require("discord.js");
+const Discord = require("discord.js"); // npm i discord.js
 const client = new Discord.Client();
-const moment = require('moment');
-const prefix = "-";
+const moment = require('moment');  // npm i moment
+const prefix = "-"; //prefix here
 
 
 
 client.on("ready", () => {
-    function randomStatus() {
-      let status = ["Doako", "WeNeverDie", "Broadcast"]
-      let rstatus = Math.floor(Math.random() * status.length);
+      let status = ["Broadcast Bot By DARWIN"]
   
-      client.user.setActivity(status[rstatus], {type: "STREAMING", url: "https://www.twitch.tv/xdarwinx_"});
-    }; setInterval(randomStatus, 5000)
-    
+      client.user.setActivity(status, {type: "STREAMING", url: "https://www.twitch.tv/xdarwinx_"});    
   });
 
 
@@ -46,16 +42,16 @@ client.on("message", async message => {
                                         message.guild.members.cache.forEach(member => {
                                             const embed = new Discord.MessageEmbed()
                                             .setColor('RANDOM')
-                                            .setTitle('<a:8584_pin:725798073753927761>・IMPORTANT ANNOUNCEMENT')
+                                            .setTitle('IMPORTANT ANNOUNCEMENT')
                                             .setTimestamp()
                                             .setImage('https://i.imgur.com/TJdHNv6.gif')
                                             .setThumbnail(member.user.displayAvatarURL({format: "gif", format: "png", dynamic: true, size: 1024}))
                                             .setAuthor(message.guild.name, message.guild.iconURL({format: "gif", format: "png", dynamic: true, size: 1024}))
                                             .setFooter('BY ' + message.author.username, message.author.displayAvatarURL({format: "gif", format: "png", dynamic: true}))
                                             .addFields(
-                                                { name: '<a:6795_rainbowleft:729671060664090634> **SERVER**', value: message.guild.name, inline: true },
-                                                { name: '<a:6795_rainbowleft:729671060664090634> **SEND BY**', value: "<@" + message.author.id + ">", inline: true },
-                                                { name: '<a:6795_rainbowleft:729671060664090634> **SEND AT**', value: `${moment().format("D/M/Y, h:mm")}`, inline: true },
+                                                { name: '**SERVER**', value: message.guild.name, inline: true },
+                                                { name: '**SEND BY**', value: "<@" + message.author.id + ">", inline: true },
+                                                { name: '**SEND AT**', value: `${moment().format("D/M/Y, h:mm")}`, inline: true },
                                             )
                                             member.send(embed);
                                             member.send(`\n\n\n> **USER**: ||${member}||\n> **MESSAGE**:\n\n${args}`);
@@ -72,4 +68,4 @@ client.on("message", async message => {
                             
 });
 
-client.login('NzE4NDY0OTgwNjMwMTEwMjU5.XxIpAA.wygWU069KQzgapgOuvuoWgh_7Lw');
+client.login('YOUR_TOKEN_HERE');
